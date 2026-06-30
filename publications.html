@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Publications — Guli Zhu</title>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="index.html">Guli Zhu</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-links">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="research.html" data-page="research.html">Research</a>
+      <a href="publications.html" data-page="publications.html">Publications</a>
+      <a href="projects.html" data-page="projects.html">Projects</a>
+      <a href="cv.html" data-page="cv.html">CV</a>
+      <a href="others.html" data-page="others.html">Personal</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <div class="page-header">
+      <h1>Publications</h1>
+      <p>Peer-reviewed papers, accepted manuscripts, and conference presentations. Source: <code>cv.tex</code> and the M³Bench paper/repository.</p>
+    </div>
+
+    <section class="section">
+      <h2><i class="fa-solid fa-star icon"></i>2026</h2>
+
+      <article class="card" id="m3bench" style="padding:26px;">
+        <div class="project-figure" style="margin-top:0;">
+          <img src="assets/img/m3bench/workflow.png" alt="Post-deployment medical VLM model editing workflow with clinician-in-the-loop feedback" />
+          <p class="caption">Post-deployment workflow of medical VLM model editing with clinician-in-the-loop feedback: targeted edits correct specific errors while preserving existing model behavior.</p>
+        </div>
+
+        <p class="pub-title" style="font-size:1.25rem;">Evaluating and Understanding Model Editing for Medical Vision Language Models (M³Bench)</p>
+        <p class="pub-authors"><span class="me">Guli Zhu</span>*, Chenwei Wu*, Liyue Shen &nbsp;<span class="muted">(* equal contribution) — University of Michigan, Ann Arbor</span></p>
+        <p class="pub-venue">European Conference on Computer Vision (ECCV) 2026 <span class="status-badge status-accepted">Accepted</span></p>
+
+        <h3 style="margin-top:20px;">Abstract</h3>
+        <p>
+          Model editing promises a fast, targeted way to correct post-deployment mistakes in medical
+          vision-language models (VLMs) without costly retraining. However, existing multimodal model editing
+          benchmarks focus on general-purpose tasks and do not reflect realistic clinical domain requirements
+          and variability. To address this, we introduce M³Bench, a clinically grounded benchmark for
+          multimodal model editing that evaluates whether an edit remains reliable, precise and generalizable
+          under the challenges of image and text variation, modality and protocol shifts, clinical knowledge
+          composition, and temporal progression. M³Bench contains 16,276 questions spanning diverse anatomy,
+          modalities, and specialties, and supports both single and sequential edits. Evaluating 4
+          representative editors across 4 medical VLMs, we find that no method excels across all criteria:
+          gradient-based editors achieve strong transfer but suffer from catastrophic locality violations,
+          whereas memory-based methods preserve locality but lack compositional generality and exhibit high
+          backbone-dependent hyperparameter sensitivity. We further attribute these failures to the latent
+          space geometry of VLMs and how different editing methods shift its landscape. Overall, M³Bench
+          establishes a rigorous clinical stress test for multimodal model editing and offers actionable
+          guidance for safer post-deployment adaptation.
+        </p>
+
+        <h3>Key Contributions</h3>
+        <ul class="simple-list">
+          <li>Introduce M³Bench, a clinically grounded benchmark for multimodal model editing in medical VLMs, with 16,276 questions over 1,398 unique images spanning multiple modalities, anatomical sites, and findings.</li>
+          <li>Define a six-dimension evaluation framework centered on reliability, locality vs. generality (image and text axes), modality shift, compositional edits, and temporal stability — supporting both single-edit and sequential-edit regimes.</li>
+          <li>Benchmark 4 representative editing methods (MEND, GRACE, BalancEdit, LoRA) across 4 medical VLM backbones (LLaVA-Med, BioMed-Qwen, HuatuoGPT-Vision 7B/34B).</li>
+          <li>Show that gradient-based editors achieve strong reliability/generality but suffer catastrophic locality violations, while memory-based editors preserve locality but lack compositional generality and are highly sensitive to backbone-dependent hyperparameters.</li>
+          <li>Attribute these failure modes to the latent-space geometry of medical VLMs (a concentrated "cone effect" among clinical concepts) and analyze how different editing methods reshape that geometry.</li>
+        </ul>
+
+        <div class="pub-links" style="margin-top:18px;">
+          <a class="btn btn-placeholder" href="#"><i class="fa-solid fa-file-lines"></i> Paper <span class="placeholder-note">placeholder</span></a>
+          <a class="btn" href="https://github.com/BioMed-AI-Lab-U-Michgan/M3Bench" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          <a class="btn" href="https://biomed-ai-lab-u-michgan.github.io/M3Bench/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Project Website</a>
+          <a class="btn btn-placeholder" href="#"><i class="fa-solid fa-database"></i> Hugging Face <span class="placeholder-note">placeholder</span></a>
+          <a class="btn" href="#bib-m3bench"><i class="fa-solid fa-quote-left"></i> BibTeX</a>
+        </div>
+
+        <div class="bibtex-block" id="bib-m3bench">
+          <button class="btn copy-btn" data-copy-target="#bib-m3bench-code"><i class="fa-regular fa-copy"></i> Copy</button>
+          <pre id="bib-m3bench-code">@inproceedings{m3bench2026,
+  title     = {Evaluating and Understanding Model Editing for Medical Vision-Language Models},
+  author    = {Zhu, Guli and Wu, Chenwei and Shen, Liyue},
+  booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
+  year      = {2026},
+  url       = {https://arxiv.org/abs/PLACEHOLDER}
+}</pre>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2><i class="fa-solid fa-clock-rotate-left icon"></i>2023 – 2025</h2>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-body">
+            <p class="pub-title">Early Noninvasive Prediction of Insulin Resistance through Muscle Ultrasound Radiomics</p>
+            <p class="pub-authors">Khan, S., Klochko, C. L., <span class="me">Zhu, G.</span>, Ma, D., Wu, C., Shen, L.</p>
+            <p class="pub-venue">Radiological Society of North America (RSNA 2025), Scientific Presentations — Oral, Chicago, IL, Nov–Dec 2025 <span class="status-badge status-accepted">Accepted</span></p>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-body">
+            <p class="pub-title">BOARD #92: WIP: Generative AI-based Learning Tutor for Biomedical Data Science (GAIL Tutor BDS)</p>
+            <p class="pub-authors">Vu, K., Maddox, A. M., Tonon, C. W., <span class="me">Zhu, G.</span>, Wang, T., Opperman, R. M., Ding, Q., Bai, Z., Liu, Z., Wang, Z., Rao, A., Yoon, D.</p>
+            <p class="pub-venue">Proceedings of the 2025 ASEE Annual Conference &amp; Exposition, June 2025</p>
+            <div class="pub-links">
+              <a class="btn" href="https://peer.asee.org/board-92-wip-generative-ai-based-learning-tutor-for-biomedical-data-science-gail-tutor-bds" target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> ASEE PEER</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-body">
+            <p class="pub-title">A Comprehensive Study on Machine Learning Models Combining with Oversampling for Bronchopulmonary Dysplasia-Associated Pulmonary Hypertension in Very Preterm Infants</p>
+            <p class="pub-authors">Wang, D., Huang, S., Cao, J., Feng, Z., Jiang, Q., Zhang, W., Chen, J., Liu, C., <span class="me">Zhu, G.</span>, Liao, W., Zhang, L., Guo, W., Liu, L., Yang, J., Qiuping, L.</p>
+            <p class="pub-venue">Respiratory Research, 2024</p>
+            <div class="pub-links">
+              <a class="btn" href="https://pubmed.ncbi.nlm.nih.gov/38720331/" target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> PubMed</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-body">
+            <p class="pub-title">A Multivariate Logistic Regression Model with Over Sampling for Bronchopulmonary Dysplasia Associated with Pulmonary Hypertension in Very Preterm Infants: A Multi-center Retrospective Study</p>
+            <p class="pub-authors">Wang, D., Huang, S., Cao, J., Feng, Z., Jiang, Q., Zhang, W., Chen, J., Liu, C., <span class="me">Zhu, G.</span>, Liao, W., Zhang, L., Guo, W., Liu, L., Yang, J., Qiuping, L.</p>
+            <p class="pub-venue">Proceedings of The First IEEE International Conference on Medical Artificial Intelligence (IEEE MedAI 2023)</p>
+            <div class="pub-links">
+              <a class="btn" href="https://ieeexplore.ieee.org/document/10403344" target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> IEEE Xplore</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>&copy; 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
+    <div class="social-icons">
+      <a href="mailto:gulizhu@umich.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/guli-zhu-cameron/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#" title="Google Scholar (placeholder)"><i class="fa-solid fa-graduation-cap"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

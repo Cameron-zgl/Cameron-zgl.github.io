@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects — Guli Zhu</title>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="index.html">Guli Zhu</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-links">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="research.html" data-page="research.html">Research</a>
+      <a href="publications.html" data-page="publications.html">Publications</a>
+      <a href="projects.html" data-page="projects.html">Projects</a>
+      <a href="cv.html" data-page="cv.html">CV</a>
+      <a href="others.html" data-page="others.html">Personal</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <div class="page-header">
+      <h1>Projects</h1>
+      <p>
+        Research and engineering projects from my CV that are not themselves published papers. For my main
+        publication-style research output — the M³Bench benchmark (ECCV 2026) — see the
+        <a href="publications.html#m3bench">Publications page</a>.
+      </p>
+    </div>
+
+    <section class="section">
+      <div class="grid">
+
+        <div class="card">
+          <h3>Ultrasound–Diabetes Multimodal Prediction</h3>
+          <p>
+            University of Michigan, Graduate Researcher (PI: Prof. Liyue Shen), 2025.03 – Present.
+          </p>
+          <p>
+            Built a unified pipeline linking clinical variables (e.g., BMI, age, labs) with skeletal-muscle
+            ultrasound (deltoid, vastus; SAX/LAX views) for diabetes and insulin-resistance prediction.
+            Trained clinical-only baselines and developed segmentation models (U-Net/MedSAM) to derive
+            quantitative muscle features (echogenicity/density, thickness, cross-sectional area), with
+            radiomics/texture descriptors and patient-level cross-validated evaluation. Designed and compared
+            early- and late-fusion multimodal strategies to predict insulin resistance / type 2 diabetes.
+          </p>
+          <span class="status-badge status-progress">In Progress</span>
+          <div class="tags"><span class="tag">Ultrasound</span><span class="tag">Segmentation</span><span class="tag">Radiomics</span><span class="tag">Multimodal Fusion</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Biomedical Pathology RAG Benchmark (DIAG)</h3>
+          <p>
+            University of Michigan, Multidisciplinary Design Program (MDP), Team Lead, 2025.01 – Present.
+          </p>
+          <p>
+            Lead a subteam designing a pathology-specific retrieval-augmented generation (RAG) benchmark for
+            biomedical and pathology LLMs, integrating BioLLM and DeepSeek models with modular retrievers and
+            embeddings. Developed standardized datasets and retrieval/generation evaluation metrics
+            (e.g., Recall@K, nDCG, faithfulness) together with evidence-citation pipelines for benchmarking.
+          </p>
+          <span class="status-badge status-progress">In Progress</span>
+          <div class="tags"><span class="tag">RAG</span><span class="tag">Pathology</span><span class="tag">LLM Evaluation</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Final Year Project: Kimera with SLAM Semantic Mapping and Localization</h3>
+          <p>
+            BNBU, Student Researcher, 2023.05 – 2023.12.
+          </p>
+          <p>
+            Replicated MIT's Kimera project and explored semantic segmentation in SLAM, investigating its
+            impact on localization accuracy and introducing optimizations to improve outcomes.
+          </p>
+          <div class="tags"><span class="tag">SLAM</span><span class="tag">Semantic Segmentation</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Genetic Disease Research Project in Data Science</h3>
+          <p>
+            BNBU, Project Subteam Leader, 2022.10 – 2023.04.
+          </p>
+          <p>
+            Led data analysis and modeling using Decision Trees, Gradient Boosting Trees, Random Forests, and
+            Logistic Regression; the final Logistic Regression model achieved 93% accuracy. Results were
+            published at IEEE MedAI 2023 and implemented in local hospitals.
+          </p>
+          <div class="tags"><span class="tag">Classical ML</span><span class="tag">Healthcare</span></div>
+          <p class="section-foot"><a href="publications.html">See related publication →</a></p>
+        </div>
+
+        <div class="card" style="border-style:dashed; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:var(--text-muted);">
+          <i class="fa-solid fa-plus" style="font-size:1.4rem; margin-bottom:8px;"></i>
+          <h3 style="color:var(--text-muted);">More Projects Coming Soon</h3>
+          <p>PLACEHOLDER — additional engineering/course projects can be added here.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>&copy; 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
+    <div class="social-icons">
+      <a href="mailto:gulizhu@umich.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/guli-zhu-cameron/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#" title="Google Scholar (placeholder)"><i class="fa-solid fa-graduation-cap"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

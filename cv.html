@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CV — Guli Zhu</title>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="index.html">Guli Zhu</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav-links">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="research.html" data-page="research.html">Research</a>
+      <a href="publications.html" data-page="publications.html">Publications</a>
+      <a href="projects.html" data-page="projects.html">Projects</a>
+      <a href="cv.html" data-page="cv.html">CV</a>
+      <a href="others.html" data-page="others.html">Personal</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <div class="page-header">
+      <h1>Curriculum Vitae</h1>
+      <p>Structured from <code>cv.tex</code>. Click any section or entry to expand it for full detail.</p>
+    </div>
+
+    <div class="cv-toolbar">
+      <a class="btn btn-accent" href="assets/pdf/cv.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
+      <div class="btn-row">
+        <button class="btn" id="cv-expand-all"><i class="fa-solid fa-square-plus"></i> Expand all</button>
+        <button class="btn" id="cv-collapse-all"><i class="fa-solid fa-square-minus"></i> Collapse all</button>
+      </div>
+    </div>
+
+    <!-- Basics -->
+    <details class="cv-section" open>
+      <summary>Basics <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <div class="cv-section-body">
+        <div class="cv-basics-grid">
+          <div><span>Name</span>Guli Zhu</div>
+          <div><span>Email</span><a href="mailto:gulizhu@umich.edu">gulizhu@umich.edu</a></div>
+          <div><span>Phone</span>(+1) 734-353-8376</div>
+          <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/guli-zhu-cameron/" target="_blank" rel="noopener">guli-zhu-cameron</a></div>
+          <div><span>Location</span>Ann Arbor, MI</div>
+          <div><span>GitHub</span><a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener">Cameron-zgl</a></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- Education -->
+    <details class="cv-section" open>
+      <summary>Education <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <div class="cv-section-body">
+        <details class="cv-entry" open>
+          <summary>
+            <div><div class="entry-title">University of Michigan — Ann Arbor</div><div class="entry-sub">Master of Health Data Science</div></div>
+            <div class="entry-meta">2024.08 – 2026.06 · Ann Arbor, MI</div>
+          </summary>
+        </details>
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">Beijing Normal-Hong Kong Baptist University (BNBU)</div><div class="entry-sub">Bachelor of Science in Data Science</div></div>
+            <div class="entry-meta">2020.09 – 2024.06 · Zhuhai, China</div>
+          </summary>
+        </details>
+      </div>
+    </details>
+
+    <!-- Research Experience -->
+    <details class="cv-section" open>
+      <summary>Research Experience <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <div class="cv-section-body">
+
+        <details class="cv-entry" open>
+          <summary>
+            <div><div class="entry-title">★ Model Editing for Medical Multimodal LM — BioMed-AI Lab, University of Michigan</div><div class="entry-sub">Graduate Researcher (PI: Prof. Liyue Shen)</div></div>
+            <div class="entry-meta">2025.06 – Present · Ann Arbor, MI</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Formulated localized factual editing for medical VLMs and designed a six-dimension framework centered on locality vs. generality, modality shift, compositional edits, and temporal stability.</li>
+              <li>Built a fully reproducible evaluation stack (pre/post-edit scoring, automatic grading, evidence attribution, and audit sampling), enabling ablation-driven analysis rather than anecdotal case studies.</li>
+              <li>Curated Med-VQA–centric testbeds (VQA-RAD, PathVQA, PMC-VQA, SLAKE) and temporal CT subsets; created stress tests with text/vision perturbations, cross-modality locality probes (edit on CT; probe on CXR/MRI/US), and rare-disease tails.</li>
+              <li>Benchmarked multiple editing approaches across HuatuoGPT-Vision-34B, LLaVA-Med-7B, and related baselines on a 6-dimension benchmark; preparing a public release of the specification and evaluation code. <em>(Accepted ECCV 2026)</em></li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">★ Ultrasound–Diabetes Multimodal Prediction — University of Michigan</div><div class="entry-sub">Graduate Researcher (PI: Prof. Liyue Shen)</div></div>
+            <div class="entry-meta">2025.03 – Present · Ann Arbor, MI</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Built a unified pipeline linking clinical variables (e.g., BMI, age, labs) with skeletal-muscle ultrasound (deltoid, vastus; SAX/LAX) for diabetes/insulin-resistance prediction.</li>
+              <li>Trained clinical-only baselines and developed segmentation (U-Net/MedSAM) to derive quantitative muscle features (echogenicity/density, thickness, cross-sectional area).</li>
+              <li>Engineered feature extraction and QC for masks; computed radiomics/texture descriptors; standardized patient-level splits with cross-validated evaluation.</li>
+              <li>Designed and compared multimodal fusion strategies (early/late fusion) to predict insulin resistance/T2D; documented metrics and ablation findings.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">DIAG Research Subteam — Biomedical Pathology RAG Benchmark, University of Michigan</div><div class="entry-sub">Team Lead</div></div>
+            <div class="entry-meta">2025.01 – Present · Ann Arbor, MI</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Lead subteam under the Multidisciplinary Design Program (MDP) focusing on retrieval-augmented generation (RAG) for biomedical and pathology LLMs.</li>
+              <li>Designed and implemented a pathology-specific RAG benchmark integrating BioLLM and DeepSeek models with modular retrievers and embeddings.</li>
+              <li>Developed standardized datasets, retrieval and generation evaluation metrics (e.g., Recall@K, nDCG, faithfulness), and evidence-citation pipelines for benchmarking.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">Final Year Project (FYP): Kimera with SLAM Semantic Mapping and Localization — BNBU</div><div class="entry-sub">Student Researcher</div></div>
+            <div class="entry-meta">2023.05 – 2023.12 · Zhuhai, China</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Replicated MIT's Kimera project and explored semantic segmentation in SLAM.</li>
+              <li>Investigated impact of semantic segmentation on SLAM localization.</li>
+              <li>Introduced optimizations to improve project outcomes.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">Large Language Model Evaluation Project — BNBU</div><div class="entry-sub">Researcher</div></div>
+            <div class="entry-meta">2023.05 – 2023.12 · Zhuhai, China</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Conducted review of LLM assessment methods; analyzed pros and cons.</li>
+              <li>Evaluated critical thinking of LLMs with psychology/sociology insights.</li>
+              <li>Developed methods to assess critical thinking abilities of LLMs.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">Genetic Disease Research Project in Data Science — BNBU</div><div class="entry-sub">Project Subteam Leader</div></div>
+            <div class="entry-meta">2022.10 – 2023.04 · Zhuhai, China</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Led data analysis and modeling; trained Decision Trees, Gradient Boosting Trees, Random Forests, and Logistic Regression.</li>
+              <li>Applied overfitting-mitigation techniques to enhance performance after identifying suboptimal recall.</li>
+              <li>Logistic Regression achieved accuracy rate of 93%.</li>
+              <li>Paper accepted by IEEE MedAI 2023; results implemented in local hospitals.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">Research Assistant for Professor Xuemei Chen — BNBU</div><div class="entry-sub">Research Assistant</div></div>
+            <div class="entry-meta">2022.01 – 2022.04 · Zhuhai, China</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Assisted Professor Chen in linguistics research with a focus on data analysis; helped the publication of paper.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">Chinese Academy of Sciences ML Online Internship Program</div><div class="entry-sub">Intern</div></div>
+            <div class="entry-meta">2021.06 – 2021.09 · Remote</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Constructed a simulation time-series model for COVID-19 using machine learning and data visualization tools.</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- Internship -->
+    <details class="cv-section">
+      <summary>Internship <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <div class="cv-section-body">
+
+        <details class="cv-entry" open>
+          <summary>
+            <div><div class="entry-title">ByteDance — Machine Learning Intern</div><div class="entry-sub">Intern, TikTok Endorsement Project</div></div>
+            <div class="entry-meta">2024.03 – 2024.07 · Shanghai, China</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Developed multimodal recommendation model for TikTok product endorsement.</li>
+              <li>Built product recognition (CV) and sentiment analysis (NLP) components.</li>
+              <li>Designed algorithms for clarity analysis, keyframe extraction, and clothing item recognition.</li>
+              <li>Integrated LLMs to enhance recommendation accuracy and intent analysis.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">Guangzhou Institute of Tropical and Marine Meteorology</div><div class="entry-sub">Research Intern</div></div>
+            <div class="entry-meta">2022.06 – 2022.08 · Guangzhou, China</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Analyzed typhoon forecasting errors using data-based methods.</li>
+              <li>Verified results with multiple models and visualization tools.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">UIC Mathematics Summer Course Internship (TA)</div><div class="entry-sub">Teaching Assistant</div></div>
+            <div class="entry-meta">2021.06 – 2021.08 · Zhuhai, China</div>
+          </summary>
+          <div class="entry-body">
+            <ul>
+              <li>Wrote lesson plans, created courseware, and designed course activities.</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+    <!-- Publications -->
+    <details class="cv-section">
+      <summary>Publications <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <div class="cv-section-body">
+        <p class="muted">Full list with links and BibTeX on the <a href="publications.html">Publications page</a>.</p>
+        <ul class="simple-list">
+          <li><strong>Zhu, G.</strong>, Wu, C., &amp; Shen, L. (2026). <em>Evaluating and Understanding Model Editing for Medical Vision Language Models.</em> ECCV 2026 — Accepted.</li>
+          <li>Khan, S., Klochko, C. L., <strong>Zhu, G.</strong>, Ma, D., Wu, C., &amp; Shen, L. (2025). <em>Early Noninvasive Prediction of Insulin Resistance through Muscle Ultrasound Radiomics.</em> RSNA 2025 — Oral, Accepted.</li>
+          <li>Vu, K., et al., <strong>Zhu, G.</strong>, et al. (2025). <em>BOARD #92: WIP: Generative AI-based Learning Tutor for Biomedical Data Science (GAIL Tutor BDS).</em> ASEE Annual Conference &amp; Exposition 2025.</li>
+          <li>Wang, D., Huang, S., Cao, J., et al., <strong>Zhu, G.</strong>, et al. (2024). <em>A comprehensive study on machine learning models combining with oversampling for bronchopulmonary dysplasia-associated pulmonary hypertension in very preterm infants.</em> Respiratory Research.</li>
+          <li>Wang, D., Huang, S., Cao, J., et al., <strong>Zhu, G.</strong>, et al. (2023). <em>A Multivariate Logistic Regression Model with Over Sampling for Bronchopulmonary Dysplasia Associated with Pulmonary Hypertension in Very Preterm Infants: A Multi-center Retrospective Study.</em> IEEE MedAI 2023.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Awards -->
+    <details class="cv-section">
+      <summary>Honors &amp; Awards <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <div class="cv-section-body">
+        <ul class="simple-list">
+          <li>Outstanding Project Award, 2021 "Jingniu Hui" Cup UIC Innovation and Entrepreneurship Competition</li>
+          <li>2021 UIC Outstanding Volunteer</li>
+          <li>Outstanding Volunteer, 7th UIC Fu Chong Youth Entrepreneurship Forum</li>
+          <li>Province Second Prize, 2022 National Mathematical Modeling Competition</li>
+          <li>Best Poster, UIC Computer Science Exhibition 2023</li>
+          <li>Guangdong Medical Valley Scholarship, 2023</li>
+        </ul>
+        <p class="muted" style="margin-top:14px; font-size:0.85rem;">Institution rename note: UIC = BNU–HKBU United International College (now renamed as BNBU).</p>
+      </div>
+    </details>
+
+    <!-- Activities -->
+    <details class="cv-section">
+      <summary>Extra-curricular Activities <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <div class="cv-section-body">
+        <ul class="simple-list">
+          <li>Project Manager, Cyber Academy Project team of UIC Enactus (developed 150-hour programming course).</li>
+          <li>Undersecretary, Intelligence Capital Department of UIC Enactus.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- Skills -->
+    <details class="cv-section">
+      <summary>Skills &amp; Software <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <div class="cv-section-body">
+        <div class="skills-grid">
+          <div class="skills-row"><strong>Languages</strong><span class="list">Python, R, SQL, Bash, C</span></div>
+          <div class="skills-row"><strong>ML / AI</strong><span class="list">PyTorch, TensorFlow, scikit-learn, Hugging Face Transformers, LoRA, PyTorch Lightning, XGBoost</span></div>
+          <div class="skills-row"><strong>Data &amp; Distributed</strong><span class="list">pandas, NumPy, Dask, Spark, Hadoop</span></div>
+          <div class="skills-row"><strong>MLOps &amp; HPC</strong><span class="list">Docker, Git, Conda, CUDA, Slurm, Weights &amp; Biases, Linux/Unix</span></div>
+          <div class="skills-row"><strong>Web / Services</strong><span class="list">FastAPI, Flask, Django, HTML/CSS</span></div>
+        </div>
+      </div>
+    </details>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>&copy; 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
+    <div class="social-icons">
+      <a href="mailto:gulizhu@umich.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/guli-zhu-cameron/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#" title="Google Scholar (placeholder)"><i class="fa-solid fa-graduation-cap"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
