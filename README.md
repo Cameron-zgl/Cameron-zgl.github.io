@@ -1,6 +1,8 @@
 # gulizhu.github.io
 
-Personal academic website for **Guli Zhu** (M.S. Health Data Science, University of Michigan).
+Personal academic website for **Guli Zhu** (M.S. Health Data Science, University of Michigan),
+broadly interested in multimodal foundation models, AI for science and healthcare, and trustworthy
+AI, with current work on medical AI and model editing (M³Bench, ECCV 2026).
 A static, dependency-free HTML/CSS/JS site styled in the spirit of
 [al-folio](https://github.com/alshedivat/al-folio), with a CV page layout inspired by
 [pranavraj575.github.io](https://pranavraj575.github.io/).

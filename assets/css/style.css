@@ -191,6 +191,16 @@ main { padding: 40px 0 80px; }
   font-weight: 700;
   box-shadow: var(--shadow-lg);
   user-select: none;
+  overflow: hidden;
+  border: 3px solid var(--card-bg);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+  border-radius: 50%;
 }
 
 .hero-text { flex: 1 1 360px; min-width: 280px; }
@@ -271,6 +281,7 @@ main { padding: 40px 0 80px; }
 .status-accepted { color: #1d7a4c; }
 .status-progress { color: #b3791d; }
 .status-submitted { color: var(--accent); }
+.status-completed { color: var(--text-muted); }
 
 /* ---------- News list ---------- */
 .news-list { list-style: none; margin: 0; padding: 0; }
