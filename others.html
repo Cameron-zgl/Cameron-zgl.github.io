@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<script>(function(){try{var l=localStorage.getItem('gz-lang')||'en';document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang', l==='zh'?'zh-CN':'en');}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Personal — Guli Zhu</title>
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -17,14 +18,18 @@
     <a class="brand" href="index.html">Guli Zhu</a>
     <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
     <div class="nav-links">
-      <a href="index.html" data-page="index.html">Home</a>
-      <a href="research.html" data-page="research.html">Research</a>
-      <a href="publications.html" data-page="publications.html">Publications</a>
-      <a href="projects.html" data-page="projects.html">Projects</a>
-      <a href="cv.html" data-page="cv.html">CV</a>
-      <a href="others.html" data-page="others.html">Personal</a>
+      <a href="index.html" data-page="index.html" data-en="Home" data-zh="首页">Home</a>
+      <a href="research.html" data-page="research.html" data-en="Research" data-zh="研究方向">Research</a>
+      <a href="publications.html" data-page="publications.html" data-en="Publications" data-zh="论文成果">Publications</a>
+      <a href="projects.html" data-page="projects.html" data-en="Projects" data-zh="项目">Projects</a>
+      <a href="cv.html" data-page="cv.html" data-en="CV" data-zh="简历">CV</a>
+      <a href="others.html" data-page="others.html" data-en="Personal" data-zh="个人">Personal</a>
     </div>
     <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language switch">
+        <button type="button" data-lang-opt="en">EN</button>
+        <button type="button" data-lang-opt="zh">中文</button>
+      </div>
       <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
     </div>
   </div>
@@ -34,36 +39,45 @@
   <div class="container">
 
     <div class="page-header">
-      <h1>Personal &amp; Others</h1>
-      <p>A bit more about me beyond the publication list.</p>
+      <h1 data-en="Personal &amp; Others" data-zh="个人 / 其他">Personal &amp; Others</h1>
+      <p data-en="A bit more about me beyond the publication list." data-zh="一些工作之外、更全面了解我的信息。">A bit more about me beyond the publication list.</p>
     </div>
 
     <section class="section">
-      <h2><i class="fa-solid fa-location-dot icon"></i>Where I Am</h2>
-      <p>I'm based in Ann Arbor, Michigan, where I'm completing my M.S. in Health Data Science at the University of Michigan (2024–2026). Before that, I studied in Zhuhai, China, and interned in Shanghai.</p>
+      <h2><i class="fa-solid fa-location-dot icon"></i><span data-en="Where I Am" data-zh="我在哪里">Where I Am</span></h2>
+      <p class="i18n-en">I'm based in Ann Arbor, Michigan, where I'm completing my M.S. in Health Data Science at the University of Michigan (2024–2026). Before that, I studied in Zhuhai, China, and interned in Shanghai.</p>
+      <p class="i18n-zh" lang="zh-CN">我目前常驻美国密歇根州安娜堡，在密歇根大学攻读健康数据科学硕士学位（2024–2026）。此前，我在中国珠海求学，并曾在上海实习。</p>
     </section>
 
     <section class="section">
-      <h2><i class="fa-solid fa-people-group icon"></i>Community &amp; Leadership</h2>
-      <ul class="simple-list">
+      <h2><i class="fa-solid fa-people-group icon"></i><span data-en="Community &amp; Leadership" data-zh="社区与领导力">Community &amp; Leadership</span></h2>
+      <ul class="simple-list i18n-en">
         <li>Team Lead, DIAG Research Subteam — Biomedical Pathology RAG Benchmark, University of Michigan Multidisciplinary Design Program (MDP).</li>
         <li>Project Manager, Cyber Academy Project team of UIC Enactus — developed a 150-hour programming course.</li>
         <li>Undersecretary, Intelligence Capital Department of UIC Enactus.</li>
       </ul>
+      <ul class="simple-list i18n-zh" lang="zh-CN">
+        <li>担任密歇根大学跨学科设计项目（MDP）DIAG 研究子团队负责人——生物医学病理学 RAG 评测基准。</li>
+        <li>担任 UIC Enactus「Cyber Academy」项目团队项目经理——开发了一套 150 小时的编程课程。</li>
+        <li>担任 UIC Enactus「Intelligence Capital」部门副部长。</li>
+      </ul>
     </section>
 
     <section class="section">
-      <h2><i class="fa-solid fa-heart icon"></i>Outside Research</h2>
-      <p class="callout">
+      <h2><i class="fa-solid fa-heart icon"></i><span data-en="Outside Research" data-zh="工作之外">Outside Research</span></h2>
+      <p class="callout i18n-en">
         PLACEHOLDER — add personal interests, hobbies, or notes here (e.g., topics you enjoy reading about,
         activities, or causes you care about). Kept intentionally blank rather than invented.
+      </p>
+      <p class="callout i18n-zh" lang="zh-CN">
+        PLACEHOLDER — 此处可补充个人兴趣、爱好或其他说明（例如感兴趣的阅读主题、活动或关心的议题）。目前刻意留空，避免虚构内容。
       </p>
     </section>
 
     <section class="section">
-      <h2><i class="fa-solid fa-link icon"></i>Links</h2>
+      <h2><i class="fa-solid fa-link icon"></i><span data-en="Links" data-zh="相关链接">Links</span></h2>
       <div class="btn-row">
-        <a class="btn" href="mailto:gulizhu@umich.edu"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a class="btn" href="mailto:gulizhu@umich.edu"><i class="fa-solid fa-envelope"></i> <span data-en="Email" data-zh="邮箱">Email</span></a>
         <a class="btn" href="https://github.com/Cameron-zgl" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/guli-zhu-cameron/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
         <a class="btn" href="https://scholar.google.com/citations?hl=zh-CN&user=cHsc8RQAAAAJ" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
@@ -75,7 +89,7 @@
 
 <footer>
   <div class="footer-inner">
-    <span>&copy; 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
+    <span data-en="© 2026 Guli Zhu. Built with a static, al-folio-inspired template." data-zh="© 2026 Guli Zhu。本网站采用静态、al-folio 风格模板构建。">© 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
     <div class="social-icons">
       <a href="mailto:gulizhu@umich.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>

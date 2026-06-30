@@ -119,7 +119,37 @@ h1, h2, h3, h4 {
   text-decoration: none;
 }
 
-.nav-right { display: flex; align-items: center; gap: 8px; }
+.nav-right { display: flex; align-items: center; gap: 10px; }
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.lang-toggle button {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 6px 11px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.lang-toggle button.active {
+  background: var(--accent);
+  color: #fff;
+}
+.lang-toggle button:hover:not(.active) { color: var(--accent); }
+
+/* ---------- i18n: dual-language blocks ---------- */
+[data-lang="en"] .i18n-zh { display: none; }
+[data-lang="zh"] .i18n-en { display: none; }
+[data-lang="zh"] [lang="zh-CN"] { font-feature-settings: normal; }
 
 .theme-toggle {
   border: 1px solid var(--border);

@@ -1,10 +1,11 @@
 // Guli Zhu — academic personal website
-// Shared behavior: theme toggle, mobile nav, CV collapsibles, bibtex copy.
+// Shared behavior: theme toggle, language toggle, mobile nav, CV collapsibles, bibtex copy.
 
 (function () {
   "use strict";
 
   var STORAGE_KEY = "gz-theme";
+  var LANG_KEY = "gz-lang";
   var root = document.documentElement;
 
   function applyTheme(theme) {
@@ -33,6 +34,35 @@
     }
   }
 
+  function applyLang(lang) {
+    root.setAttribute("data-lang", lang);
+    root.setAttribute("lang", lang === "zh" ? "zh-CN" : "en");
+
+    document.querySelectorAll("[data-en]").forEach(function (el) {
+      var text = lang === "zh" ? (el.getAttribute("data-zh") || el.getAttribute("data-en")) : el.getAttribute("data-en");
+      if (text != null) el.textContent = text;
+    });
+
+    document.querySelectorAll(".lang-toggle [data-lang-opt]").forEach(function (opt) {
+      var active = opt.getAttribute("data-lang-opt") === lang;
+      opt.classList.toggle("active", active);
+      opt.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
+  function initLang() {
+    var stored = localStorage.getItem(LANG_KEY) || "en";
+    applyLang(stored);
+
+    document.querySelectorAll(".lang-toggle [data-lang-opt]").forEach(function (opt) {
+      opt.addEventListener("click", function () {
+        var lang = opt.getAttribute("data-lang-opt");
+        localStorage.setItem(LANG_KEY, lang);
+        applyLang(lang);
+      });
+    });
+  }
+
   function initNavToggle() {
     var toggle = document.querySelector(".nav-toggle");
     var links = document.querySelector(".nav-links");
@@ -59,7 +89,8 @@
         var text = target.innerText;
         navigator.clipboard.writeText(text).then(function () {
           var original = btn.innerHTML;
-          btn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i> Copied';
+          var copiedText = root.getAttribute("data-lang") === "zh" ? "已复制" : "Copied";
+          btn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i> ' + copiedText;
           setTimeout(function () { btn.innerHTML = original; }, 1800);
         });
       });
@@ -85,6 +116,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
+    initLang();
     initNavToggle();
     markActiveNav();
     initBibtexCopy();

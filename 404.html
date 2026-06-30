@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<script>(function(){try{var l=localStorage.getItem('gz-lang')||'en';document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang', l==='zh'?'zh-CN':'en');}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Page Not Found — Guli Zhu</title>
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -10,12 +11,19 @@
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <div style="display:flex; justify-content:flex-end; padding:16px 24px;">
+    <div class="lang-toggle" role="group" aria-label="Language switch">
+      <button type="button" data-lang-opt="en">EN</button>
+      <button type="button" data-lang-opt="zh">中文</button>
+    </div>
+  </div>
 <main>
-  <div class="container" style="text-align:center; padding-top:80px;">
+  <div class="container" style="text-align:center; padding-top:60px;">
     <h1 style="font-size:3rem;">404</h1>
-    <p class="muted">Page not found.</p>
-    <p><a class="btn btn-accent" href="index.html"><i class="fa-solid fa-house"></i> Back to Home</a></p>
+    <p class="muted" data-en="Page not found." data-zh="页面未找到。">Page not found.</p>
+    <p><a class="btn btn-accent" href="index.html"><i class="fa-solid fa-house"></i> <span data-en="Back to Home" data-zh="返回首页">Back to Home</span></a></p>
   </div>
 </main>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

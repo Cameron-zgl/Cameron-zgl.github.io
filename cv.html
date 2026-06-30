@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<script>(function(){try{var l=localStorage.getItem('gz-lang')||'en';document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang', l==='zh'?'zh-CN':'en');}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CV — Guli Zhu</title>
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -17,14 +18,18 @@
     <a class="brand" href="index.html">Guli Zhu</a>
     <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
     <div class="nav-links">
-      <a href="index.html" data-page="index.html">Home</a>
-      <a href="research.html" data-page="research.html">Research</a>
-      <a href="publications.html" data-page="publications.html">Publications</a>
-      <a href="projects.html" data-page="projects.html">Projects</a>
-      <a href="cv.html" data-page="cv.html">CV</a>
-      <a href="others.html" data-page="others.html">Personal</a>
+      <a href="index.html" data-page="index.html" data-en="Home" data-zh="首页">Home</a>
+      <a href="research.html" data-page="research.html" data-en="Research" data-zh="研究方向">Research</a>
+      <a href="publications.html" data-page="publications.html" data-en="Publications" data-zh="论文成果">Publications</a>
+      <a href="projects.html" data-page="projects.html" data-en="Projects" data-zh="项目">Projects</a>
+      <a href="cv.html" data-page="cv.html" data-en="CV" data-zh="简历">CV</a>
+      <a href="others.html" data-page="others.html" data-en="Personal" data-zh="个人">Personal</a>
     </div>
     <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language switch">
+        <button type="button" data-lang-opt="en">EN</button>
+        <button type="button" data-lang-opt="zh">中文</button>
+      </div>
       <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
     </div>
   </div>
@@ -35,48 +40,48 @@
 
 
     <div class="cv-toolbar">
-      <a class="btn btn-accent" href="assets/pdf/cv.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
+      <a class="btn btn-accent" href="assets/pdf/cv.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> <span data-en="Download PDF" data-zh="下载 PDF">Download PDF</span></a>
       <div class="btn-row">
-        <button class="btn" id="cv-expand-all"><i class="fa-solid fa-square-plus"></i> Expand all</button>
-        <button class="btn" id="cv-collapse-all"><i class="fa-solid fa-square-minus"></i> Collapse all</button>
+        <button class="btn" id="cv-expand-all"><i class="fa-solid fa-square-plus"></i> <span data-en="Expand all" data-zh="全部展开">Expand all</span></button>
+        <button class="btn" id="cv-collapse-all"><i class="fa-solid fa-square-minus"></i> <span data-en="Collapse all" data-zh="全部收起">Collapse all</span></button>
       </div>
     </div>
 
     <!-- Basics -->
     <details class="cv-section" open>
-      <summary>Basics <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <summary><span data-en="Basics" data-zh="基本信息">Basics</span> <i class="fa-solid fa-chevron-right chevron"></i></summary>
       <div class="cv-section-body">
-        <p style="margin:0 0 16px; color:var(--text-muted); font-size:0.95rem;">
+        <p style="margin:0 0 16px; color:var(--text-muted); font-size:0.95rem;" data-en="Broadly interested in AI for science and human-centered applications, with a current focus on medical AI, multimodal foundation models, trustworthy model adaptation, and evaluation." data-zh="广泛关注科学智能（AI for Science）与以人为本的人工智能应用，目前的研究重点是医疗人工智能、多模态基础模型、可信赖的模型适配与评测方法。">
           Broadly interested in AI for science and human-centered applications, with a current focus on
           medical AI, multimodal foundation models, trustworthy model adaptation, and evaluation.
         </p>
         <div class="cv-basics-grid">
-          <div><span>Name</span>Guli Zhu</div>
-          <div><span>Email</span><a href="mailto:gulizhu@umich.edu">gulizhu@umich.edu</a></div>
-          <div><span>Phone (US)</span>(+1) 734-353-8376</div>
-          <div><span>Phone (CN)</span>+86 158 1813 5286</div>
-          <div><span>Current Location</span>Ann Arbor, MI</div>
-          <div><span>Address</span>Guangzhou, Guangdong, China</div>
-          <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/guli-zhu-cameron/" target="_blank" rel="noopener">guli-zhu-cameron</a></div>
-          <div><span>GitHub</span><a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener">Cameron-zgl</a></div>
-          <div><span>Google Scholar</span><a href="https://scholar.google.com/citations?hl=zh-CN&user=cHsc8RQAAAAJ" target="_blank" rel="noopener">View Profile</a></div>
+          <div><span data-en="Name" data-zh="姓名">Name</span>Guli Zhu</div>
+          <div><span data-en="Email" data-zh="邮箱">Email</span><a href="mailto:gulizhu@umich.edu">gulizhu@umich.edu</a></div>
+          <div><span data-en="Phone (US)" data-zh="电话（美国）">Phone (US)</span>(+1) 734-353-8376</div>
+          <div><span data-en="Phone (CN)" data-zh="电话（中国）">Phone (CN)</span>+86 158 1813 5286</div>
+          <div><span data-en="Current Location" data-zh="现居地">Current Location</span>Ann Arbor, MI</div>
+          <div><span data-en="Address" data-zh="通讯地址">Address</span>Guangzhou, Guangdong, China</div>
+          <div><span data-en="LinkedIn" data-zh="LinkedIn">LinkedIn</span><a href="https://www.linkedin.com/in/guli-zhu-cameron/" target="_blank" rel="noopener">guli-zhu-cameron</a></div>
+          <div><span data-en="GitHub" data-zh="GitHub">GitHub</span><a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener">Cameron-zgl</a></div>
+          <div><span data-en="Google Scholar" data-zh="Google Scholar">Google Scholar</span><a href="https://scholar.google.com/citations?hl=zh-CN&user=cHsc8RQAAAAJ" target="_blank" rel="noopener" data-en="View Profile" data-zh="查看主页">View Profile</a></div>
         </div>
       </div>
     </details>
 
     <!-- Education -->
     <details class="cv-section" open>
-      <summary>Education <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <summary><span data-en="Education" data-zh="教育背景">Education</span> <i class="fa-solid fa-chevron-right chevron"></i></summary>
       <div class="cv-section-body">
         <details class="cv-entry" open>
           <summary>
-            <div><div class="entry-title">University of Michigan — Ann Arbor</div><div class="entry-sub">Master of Health Data Science</div></div>
+            <div><div class="entry-title">University of Michigan — Ann Arbor</div><div class="entry-sub" data-en="Master of Health Data Science" data-zh="健康数据科学硕士">Master of Health Data Science</div></div>
             <div class="entry-meta">2024.08 – 2026.06 · Ann Arbor, MI</div>
           </summary>
         </details>
         <details class="cv-entry">
           <summary>
-            <div><div class="entry-title">Beijing Normal-Hong Kong Baptist University (BNBU)</div><div class="entry-sub">Bachelor of Science in Data Science</div></div>
+            <div><div class="entry-title">Beijing Normal-Hong Kong Baptist University (BNBU)</div><div class="entry-sub" data-en="Bachelor of Science in Data Science" data-zh="数据科学理学学士">Bachelor of Science in Data Science</div></div>
             <div class="entry-meta">2020.09 – 2024.06 · Zhuhai, China</div>
           </summary>
         </details>
@@ -85,116 +90,155 @@
 
     <!-- Research Experience -->
     <details class="cv-section" open>
-      <summary>Research Experience <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <summary><span data-en="Research Experience" data-zh="科研经历">Research Experience</span> <i class="fa-solid fa-chevron-right chevron"></i></summary>
       <div class="cv-section-body">
 
         <details class="cv-entry" open>
           <summary>
-            <div><div class="entry-title">★ Model Editing for Medical Multimodal LM — BioMed-AI Lab, University of Michigan</div><div class="entry-sub">Graduate Researcher (PI: Prof. Liyue Shen)</div></div>
+            <div><div class="entry-title">★ Model Editing for Medical Multimodal LM — BioMed-AI Lab, University of Michigan</div><div class="entry-sub" data-en="Graduate Researcher (PI: Prof. Liyue Shen)" data-zh="研究生研究员（导师：Liyue Shen 教授）">Graduate Researcher (PI: Prof. Liyue Shen)</div></div>
             <div class="entry-meta">2025.06 – Present · Ann Arbor, MI</div>
           </summary>
           <div class="entry-body">
-            <ul>
+            <ul class="i18n-en">
               <li>Formulated localized factual editing for medical VLMs and designed a six-dimension framework centered on locality vs. generality, modality shift, compositional edits, and temporal stability.</li>
               <li>Built a fully reproducible evaluation stack (pre/post-edit scoring, automatic grading, evidence attribution, and audit sampling), enabling ablation-driven analysis rather than anecdotal case studies.</li>
               <li>Curated Med-VQA–centric testbeds (VQA-RAD, PathVQA, PMC-VQA, SLAKE) and temporal CT subsets; created stress tests with text/vision perturbations, cross-modality locality probes (edit on CT; probe on CXR/MRI/US), and rare-disease tails.</li>
               <li>Benchmarked multiple editing approaches across HuatuoGPT-Vision-34B, LLaVA-Med-7B, and related baselines on a 6-dimension benchmark; preparing a public release of the specification and evaluation code. <em>(Accepted ECCV 2026)</em></li>
             </ul>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>提出面向医疗 VLM 的局部化事实编辑方法，设计了围绕局部性（Locality）与泛化性（Generality）、模态迁移、组合式编辑及时间稳定性的六维评测框架。</li>
+              <li>构建了完全可复现的评测体系（编辑前后打分、自动评分、证据归因与抽样审查），支持基于消融实验的系统性分析，而非个案式验证。</li>
+              <li>整理了以医疗视觉问答（Med-VQA）为核心的测试集（VQA-RAD、PathVQA、PMC-VQA、SLAKE）及时序 CT 子集；构建了文本/视觉扰动压力测试、跨模态局部性探测（在 CT 上编辑、在 CXR/MRI/超声上探测）以及罕见病长尾测试。</li>
+              <li>在该六维基准上对 HuatuoGPT-Vision-34B、LLaVA-Med-7B 及相关基线模型评测了多种编辑方法；正在筹备评测规范与评测代码的公开发布。<em>（已被 ECCV 2026 接收）</em></li>
+            </ul>
           </div>
         </details>
 
         <details class="cv-entry">
           <summary>
-            <div><div class="entry-title">★ Ultrasound–Diabetes Multimodal Prediction — University of Michigan</div><div class="entry-sub">Graduate Researcher (PI: Prof. Liyue Shen)</div></div>
+            <div><div class="entry-title">★ Ultrasound–Diabetes Multimodal Prediction — University of Michigan</div><div class="entry-sub" data-en="Graduate Researcher (PI: Prof. Liyue Shen)" data-zh="研究生研究员（导师：Liyue Shen 教授）">Graduate Researcher (PI: Prof. Liyue Shen)</div></div>
             <div class="entry-meta">2025.03 – Present · Ann Arbor, MI</div>
           </summary>
           <div class="entry-body">
-            <ul>
+            <ul class="i18n-en">
               <li>Built a unified pipeline linking clinical variables (e.g., BMI, age, labs) with skeletal-muscle ultrasound (deltoid, vastus; SAX/LAX) for diabetes/insulin-resistance prediction.</li>
               <li>Trained clinical-only baselines and developed segmentation (U-Net/MedSAM) to derive quantitative muscle features (echogenicity/density, thickness, cross-sectional area).</li>
               <li>Engineered feature extraction and QC for masks; computed radiomics/texture descriptors; standardized patient-level splits with cross-validated evaluation.</li>
               <li>Designed and compared multimodal fusion strategies (early/late fusion) to predict insulin resistance/T2D; documented metrics and ablation findings.</li>
             </ul>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>构建了将临床变量（如 BMI、年龄、化验指标）与骨骼肌超声（三角肌、股四头肌；短轴/长轴切面）相结合的统一预测流程，用于糖尿病/胰岛素抵抗预测。</li>
+              <li>训练了仅基于临床数据的基线模型，并开发了基于 U-Net/MedSAM 的分割方法，用以提取肌肉的定量特征（回声强度/密度、厚度、横截面积）。</li>
+              <li>设计了分割掩膜的特征提取与质量控制流程；计算了影像组学/纹理特征；建立了以患者为单位的标准化数据划分及交叉验证评测。</li>
+              <li>设计并比较了早融合/晚融合等多模态融合策略以预测胰岛素抵抗/二型糖尿病；系统记录了评测指标与消融实验结果。</li>
+            </ul>
           </div>
         </details>
 
         <details class="cv-entry">
           <summary>
-            <div><div class="entry-title">DIAG Research Subteam — Biomedical Pathology RAG Benchmark, University of Michigan</div><div class="entry-sub">Team Lead</div></div>
+            <div><div class="entry-title">DIAG Research Subteam — Biomedical Pathology RAG Benchmark, University of Michigan</div><div class="entry-sub" data-en="Team Lead" data-zh="团队负责人">Team Lead</div></div>
             <div class="entry-meta">2025.01 – Present · Ann Arbor, MI</div>
           </summary>
           <div class="entry-body">
-            <ul>
+            <ul class="i18n-en">
               <li>Lead subteam under the Multidisciplinary Design Program (MDP) focusing on retrieval-augmented generation (RAG) for biomedical and pathology LLMs.</li>
               <li>Designed and implemented a pathology-specific RAG benchmark integrating BioLLM and DeepSeek models with modular retrievers and embeddings.</li>
               <li>Developed standardized datasets, retrieval and generation evaluation metrics (e.g., Recall@K, nDCG, faithfulness), and evidence-citation pipelines for benchmarking.</li>
             </ul>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>在跨学科设计项目（MDP）框架下领导子团队，专注于面向生物医学与病理学大语言模型的检索增强生成（RAG）研究。</li>
+              <li>设计并实现了面向病理学的 RAG 评测基准，集成 BioLLM 与 DeepSeek 模型，并采用模块化的检索器与向量表示。</li>
+              <li>构建了标准化数据集、检索与生成评测指标（如 Recall@K、nDCG、忠实度），以及用于基准评测的证据引用流程。</li>
+            </ul>
           </div>
         </details>
 
         <details class="cv-entry">
           <summary>
-            <div><div class="entry-title">Final Year Project (FYP): Kimera with SLAM Semantic Mapping and Localization — BNBU</div><div class="entry-sub">Student Researcher</div></div>
+            <div><div class="entry-title">Final Year Project (FYP): Kimera with SLAM Semantic Mapping and Localization — BNBU</div><div class="entry-sub" data-en="Student Researcher" data-zh="本科生研究员">Student Researcher</div></div>
             <div class="entry-meta">2023.05 – 2023.12 · Zhuhai, China</div>
           </summary>
           <div class="entry-body">
-            <ul>
+            <ul class="i18n-en">
               <li>Replicated MIT's Kimera project and explored semantic segmentation in SLAM.</li>
               <li>Investigated impact of semantic segmentation on SLAM localization.</li>
               <li>Introduced optimizations to improve project outcomes.</li>
             </ul>
-          </div>
-        </details>
-
-        <details class="cv-entry">
-          <summary>
-            <div><div class="entry-title">Large Language Model Evaluation Project — BNBU</div><div class="entry-sub">Researcher</div></div>
-            <div class="entry-meta">2023.05 – 2023.12 · Zhuhai, China</div>
-          </summary>
-          <div class="entry-body">
-            <ul>
-              <li>Conducted review of LLM assessment methods; analyzed pros and cons.</li>
-              <li>Evaluated critical thinking of LLMs with psychology/sociology insights.</li>
-              <li>Developed methods to assess critical thinking abilities of LLMs.</li>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>复现了 MIT 的 Kimera 项目，探索了语义分割在 SLAM 中的应用。</li>
+              <li>研究了语义分割对 SLAM 定位精度的影响。</li>
+              <li>引入了多项优化以提升项目效果。</li>
             </ul>
           </div>
         </details>
 
         <details class="cv-entry">
           <summary>
-            <div><div class="entry-title">Genetic Disease Research Project in Data Science — BNBU</div><div class="entry-sub">Project Subteam Leader</div></div>
+            <div><div class="entry-title">Large Language Model Evaluation Project — BNBU</div><div class="entry-sub" data-en="Researcher" data-zh="研究员">Researcher</div></div>
+            <div class="entry-meta">2023.05 – 2023.12 · Zhuhai, China</div>
+          </summary>
+          <div class="entry-body">
+            <ul class="i18n-en">
+              <li>Conducted review of LLM assessment methods; analyzed pros and cons.</li>
+              <li>Evaluated critical thinking of LLMs with psychology/sociology insights.</li>
+              <li>Developed methods to assess critical thinking abilities of LLMs.</li>
+            </ul>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>梳理了大语言模型评测方法的研究现状，分析其优缺点。</li>
+              <li>结合心理学与社会学视角，评估大语言模型的批判性思维能力。</li>
+              <li>提出了用于评估大语言模型批判性思维能力的方法。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">Genetic Disease Research Project in Data Science — BNBU</div><div class="entry-sub" data-en="Project Subteam Leader" data-zh="项目小组负责人">Project Subteam Leader</div></div>
             <div class="entry-meta">2022.10 – 2023.04 · Zhuhai, China</div>
           </summary>
           <div class="entry-body">
-            <ul>
+            <ul class="i18n-en">
               <li>Led data analysis and modeling; trained Decision Trees, Gradient Boosting Trees, Random Forests, and Logistic Regression.</li>
               <li>Applied overfitting-mitigation techniques to enhance performance after identifying suboptimal recall.</li>
               <li>Logistic Regression achieved accuracy rate of 93%.</li>
               <li>Paper accepted by IEEE MedAI 2023; results implemented in local hospitals.</li>
             </ul>
-          </div>
-        </details>
-
-        <details class="cv-entry">
-          <summary>
-            <div><div class="entry-title">Research Assistant for Professor Xuemei Chen — BNBU</div><div class="entry-sub">Research Assistant</div></div>
-            <div class="entry-meta">2022.01 – 2022.04 · Zhuhai, China</div>
-          </summary>
-          <div class="entry-body">
-            <ul>
-              <li>Assisted Professor Chen in linguistics research with a focus on data analysis; helped the publication of paper.</li>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>主导数据分析与建模工作，训练了决策树、梯度提升树、随机森林与逻辑回归模型。</li>
+              <li>在发现召回率欠佳后，应用过拟合缓解技术以提升模型性能。</li>
+              <li>逻辑回归模型最终达到 93% 的准确率。</li>
+              <li>相关论文被 IEEE MedAI 2023 接收；研究成果已在当地医院落地应用。</li>
             </ul>
           </div>
         </details>
 
         <details class="cv-entry">
           <summary>
-            <div><div class="entry-title">Chinese Academy of Sciences ML Online Internship Program</div><div class="entry-sub">Intern</div></div>
+            <div><div class="entry-title">Research Assistant for Professor Xuemei Chen — BNBU</div><div class="entry-sub" data-en="Research Assistant" data-zh="研究助理">Research Assistant</div></div>
+            <div class="entry-meta">2022.01 – 2022.04 · Zhuhai, China</div>
+          </summary>
+          <div class="entry-body">
+            <ul class="i18n-en">
+              <li>Assisted Professor Chen in linguistics research with a focus on data analysis; helped the publication of paper.</li>
+            </ul>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>协助陈教授开展语言学研究，主要负责数据分析，并协助论文发表工作。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">Chinese Academy of Sciences ML Online Internship Program</div><div class="entry-sub" data-en="Intern" data-zh="实习生">Intern</div></div>
             <div class="entry-meta">2021.06 – 2021.09 · Remote</div>
           </summary>
           <div class="entry-body">
-            <ul>
+            <ul class="i18n-en">
               <li>Constructed a simulation time-series model for COVID-19 using machine learning and data visualization tools.</li>
+            </ul>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>利用机器学习与数据可视化工具，构建了新冠疫情的模拟时间序列模型。</li>
             </ul>
           </div>
         </details>
@@ -204,45 +248,58 @@
 
     <!-- Internship -->
     <details class="cv-section">
-      <summary>Internship <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <summary><span data-en="Internship" data-zh="实习经历">Internship</span> <i class="fa-solid fa-chevron-right chevron"></i></summary>
       <div class="cv-section-body">
 
         <details class="cv-entry" open>
           <summary>
-            <div><div class="entry-title">ByteDance — Machine Learning Intern</div><div class="entry-sub">Intern, TikTok Endorsement Project</div></div>
+            <div><div class="entry-title">ByteDance — Machine Learning Intern</div><div class="entry-sub" data-en="Intern, TikTok Endorsement Project" data-zh="实习生，TikTok 商品种草项目">Intern, TikTok Endorsement Project</div></div>
             <div class="entry-meta">2024.03 – 2024.07 · Shanghai, China</div>
           </summary>
           <div class="entry-body">
-            <ul>
+            <ul class="i18n-en">
               <li>Developed multimodal recommendation model for TikTok product endorsement.</li>
               <li>Built product recognition (CV) and sentiment analysis (NLP) components.</li>
               <li>Designed algorithms for clarity analysis, keyframe extraction, and clothing item recognition.</li>
               <li>Integrated LLMs to enhance recommendation accuracy and intent analysis.</li>
             </ul>
-          </div>
-        </details>
-
-        <details class="cv-entry">
-          <summary>
-            <div><div class="entry-title">Guangzhou Institute of Tropical and Marine Meteorology</div><div class="entry-sub">Research Intern</div></div>
-            <div class="entry-meta">2022.06 – 2022.08 · Guangzhou, China</div>
-          </summary>
-          <div class="entry-body">
-            <ul>
-              <li>Analyzed typhoon forecasting errors using data-based methods.</li>
-              <li>Verified results with multiple models and visualization tools.</li>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>为 TikTok 商品种草场景开发了多模态推荐模型。</li>
+              <li>构建了商品识别（计算机视觉）与情感分析（自然语言处理）模块。</li>
+              <li>设计了视频清晰度分析、关键帧提取与服饰识别算法。</li>
+              <li>引入大语言模型以提升推荐准确率与用户意图分析效果。</li>
             </ul>
           </div>
         </details>
 
         <details class="cv-entry">
           <summary>
-            <div><div class="entry-title">UIC Mathematics Summer Course Internship (TA)</div><div class="entry-sub">Teaching Assistant</div></div>
+            <div><div class="entry-title">Guangzhou Institute of Tropical and Marine Meteorology</div><div class="entry-sub" data-en="Research Intern" data-zh="研究实习生">Research Intern</div></div>
+            <div class="entry-meta">2022.06 – 2022.08 · Guangzhou, China</div>
+          </summary>
+          <div class="entry-body">
+            <ul class="i18n-en">
+              <li>Analyzed typhoon forecasting errors using data-based methods.</li>
+              <li>Verified results with multiple models and visualization tools.</li>
+            </ul>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>采用数据驱动方法分析台风预报误差。</li>
+              <li>通过多模型对比与可视化工具验证分析结果。</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="cv-entry">
+          <summary>
+            <div><div class="entry-title">UIC Mathematics Summer Course Internship (TA)</div><div class="entry-sub" data-en="Teaching Assistant" data-zh="助教">Teaching Assistant</div></div>
             <div class="entry-meta">2021.06 – 2021.08 · Zhuhai, China</div>
           </summary>
           <div class="entry-body">
-            <ul>
+            <ul class="i18n-en">
               <li>Wrote lesson plans, created courseware, and designed course activities.</li>
+            </ul>
+            <ul class="i18n-zh" lang="zh-CN">
+              <li>编写教案、制作课件，并设计课堂活动。</li>
             </ul>
           </div>
         </details>
@@ -252,9 +309,10 @@
 
     <!-- Publications -->
     <details class="cv-section">
-      <summary>Publications <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <summary><span data-en="Publications" data-zh="论文成果">Publications</span> <i class="fa-solid fa-chevron-right chevron"></i></summary>
       <div class="cv-section-body">
-        <p class="muted">Full list with links and BibTeX on the <a href="publications.html">Publications page</a>.</p>
+        <p class="muted i18n-en">Full list with links and BibTeX on the <a href="publications.html">Publications page</a>.</p>
+        <p class="muted i18n-zh" lang="zh-CN">完整论文列表及 BibTeX 引用请见<a href="publications.html">"论文成果"页面</a>。</p>
         <ul class="simple-list">
           <li><strong>Zhu, G.</strong>, Wu, C., &amp; Shen, L. (2026). <em>Evaluating and Understanding Model Editing for Medical Vision Language Models.</em> ECCV 2026 — Accepted.</li>
           <li>Khan, S., Klochko, C. L., <strong>Zhu, G.</strong>, Ma, D., Wu, C., &amp; Shen, L. (2025). <em>Early Noninvasive Prediction of Insulin Resistance through Muscle Ultrasound Radiomics.</em> RSNA 2025 — Oral, Accepted.</li>
@@ -267,7 +325,7 @@
 
     <!-- Awards -->
     <details class="cv-section">
-      <summary>Honors &amp; Awards <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <summary><span data-en="Honors &amp; Awards" data-zh="荣誉与奖项">Honors &amp; Awards</span> <i class="fa-solid fa-chevron-right chevron"></i></summary>
       <div class="cv-section-body">
         <ul class="simple-list">
           <li>Outstanding Project Award, 2021 "Jingniu Hui" Cup UIC Innovation and Entrepreneurship Competition</li>
@@ -277,13 +335,14 @@
           <li>Best Poster, UIC Computer Science Exhibition 2023</li>
           <li>Guangdong Medical Valley Scholarship, 2023</li>
         </ul>
-        <p class="muted" style="margin-top:14px; font-size:0.85rem;">Institution rename note: UIC = BNU–HKBU United International College (now renamed as BNBU).</p>
+        <p class="muted i18n-en" style="margin-top:14px; font-size:0.85rem;">Institution rename note: UIC = BNU–HKBU United International College (now renamed as BNBU).</p>
+        <p class="muted i18n-zh" lang="zh-CN" style="margin-top:14px; font-size:0.85rem;">机构更名说明：UIC 即 BNU–HKBU United International College（北京师范大学-香港浸会大学联合国际学院），现已更名为 BNBU。</p>
       </div>
     </details>
 
     <!-- Activities -->
     <details class="cv-section">
-      <summary>Extra-curricular Activities <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <summary><span data-en="Extra-curricular Activities" data-zh="课外活动">Extra-curricular Activities</span> <i class="fa-solid fa-chevron-right chevron"></i></summary>
       <div class="cv-section-body">
         <ul class="simple-list">
           <li>Project Manager, Cyber Academy Project team of UIC Enactus (developed 150-hour programming course).</li>
@@ -294,14 +353,14 @@
 
     <!-- Skills -->
     <details class="cv-section">
-      <summary>Skills &amp; Software <i class="fa-solid fa-chevron-right chevron"></i></summary>
+      <summary><span data-en="Skills &amp; Software" data-zh="技能与工具">Skills &amp; Software</span> <i class="fa-solid fa-chevron-right chevron"></i></summary>
       <div class="cv-section-body">
         <div class="skills-grid">
-          <div class="skills-row"><strong>Languages</strong><span class="list">Python, R, SQL, Bash, C</span></div>
-          <div class="skills-row"><strong>ML / AI</strong><span class="list">PyTorch, TensorFlow, scikit-learn, Hugging Face Transformers, LoRA, PyTorch Lightning, XGBoost</span></div>
-          <div class="skills-row"><strong>Data &amp; Distributed</strong><span class="list">pandas, NumPy, Dask, Spark, Hadoop</span></div>
-          <div class="skills-row"><strong>MLOps &amp; HPC</strong><span class="list">Docker, Git, Conda, CUDA, Slurm, Weights &amp; Biases, Linux/Unix</span></div>
-          <div class="skills-row"><strong>Web / Services</strong><span class="list">FastAPI, Flask, Django, HTML/CSS</span></div>
+          <div class="skills-row"><strong data-en="Languages" data-zh="编程语言">Languages</strong><span class="list">Python, R, SQL, Bash, C</span></div>
+          <div class="skills-row"><strong data-en="ML / AI" data-zh="机器学习 / 人工智能">ML / AI</strong><span class="list">PyTorch, TensorFlow, scikit-learn, Hugging Face Transformers, LoRA, PyTorch Lightning, XGBoost</span></div>
+          <div class="skills-row"><strong data-en="Data &amp; Distributed" data-zh="数据处理与分布式计算">Data &amp; Distributed</strong><span class="list">pandas, NumPy, Dask, Spark, Hadoop</span></div>
+          <div class="skills-row"><strong data-en="MLOps &amp; HPC" data-zh="MLOps 与高性能计算">MLOps &amp; HPC</strong><span class="list">Docker, Git, Conda, CUDA, Slurm, Weights &amp; Biases, Linux/Unix</span></div>
+          <div class="skills-row"><strong data-en="Web / Services" data-zh="Web / 服务端开发">Web / Services</strong><span class="list">FastAPI, Flask, Django, HTML/CSS</span></div>
         </div>
       </div>
     </details>
@@ -311,7 +370,7 @@
 
 <footer>
   <div class="footer-inner">
-    <span>&copy; 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
+    <span data-en="© 2026 Guli Zhu. Built with a static, al-folio-inspired template." data-zh="© 2026 Guli Zhu。本网站采用静态、al-folio 风格模板构建。">© 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
     <div class="social-icons">
       <a href="mailto:gulizhu@umich.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>

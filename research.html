@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<script>(function(){try{var l=localStorage.getItem('gz-lang')||'en';document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang', l==='zh'?'zh-CN':'en');}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Research Interests — Guli Zhu</title>
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -17,14 +18,18 @@
     <a class="brand" href="index.html">Guli Zhu</a>
     <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
     <div class="nav-links">
-      <a href="index.html" data-page="index.html">Home</a>
-      <a href="research.html" data-page="research.html">Research</a>
-      <a href="publications.html" data-page="publications.html">Publications</a>
-      <a href="projects.html" data-page="projects.html">Projects</a>
-      <a href="cv.html" data-page="cv.html">CV</a>
-      <a href="others.html" data-page="others.html">Personal</a>
+      <a href="index.html" data-page="index.html" data-en="Home" data-zh="首页">Home</a>
+      <a href="research.html" data-page="research.html" data-en="Research" data-zh="研究方向">Research</a>
+      <a href="publications.html" data-page="publications.html" data-en="Publications" data-zh="论文成果">Publications</a>
+      <a href="projects.html" data-page="projects.html" data-en="Projects" data-zh="项目">Projects</a>
+      <a href="cv.html" data-page="cv.html" data-en="CV" data-zh="简历">CV</a>
+      <a href="others.html" data-page="others.html" data-en="Personal" data-zh="个人">Personal</a>
     </div>
     <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language switch">
+        <button type="button" data-lang-opt="en">EN</button>
+        <button type="button" data-lang-opt="zh">中文</button>
+      </div>
       <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
     </div>
   </div>
@@ -34,34 +39,34 @@
   <div class="container">
 
     <div class="page-header">
-      <h1>Research Interests</h1>
-      <p>I am broadly interested in AI for science and human-centered applications, with a current concrete focus on medical AI, multimodal foundation models, trustworthy model adaptation, and evaluation.</p>
+      <h1 data-en="Research Interests" data-zh="研究兴趣">Research Interests</h1>
+      <p data-en="I am broadly interested in AI for science and human-centered applications, with a current concrete focus on medical AI, multimodal foundation models, trustworthy model adaptation, and evaluation." data-zh="我广泛关注科学智能（AI for Science）与以人为本的人工智能应用，目前的具体研究重点是医疗人工智能（Medical AI）、多模态基础模型、可信赖的模型适配与评测方法。">I am broadly interested in AI for science and human-centered applications, with a current concrete focus on medical AI, multimodal foundation models, trustworthy model adaptation, and evaluation.</p>
     </div>
 
     <section class="section">
       <div class="grid">
         <div class="card">
-          <h3><i class="fa-solid fa-layer-group icon"></i> Multimodal Foundation Models</h3>
-          <p>Vision-language models, multimodal reasoning, representation learning, and model adaptation — how large multimodal models ground language in visual evidence and generalize across domains.</p>
+          <h3><i class="fa-solid fa-layer-group icon"></i> <span data-en="Multimodal Foundation Models" data-zh="多模态基础模型">Multimodal Foundation Models</span></h3>
+          <p data-en="Vision-language models, multimodal reasoning, representation learning, and model adaptation — how large multimodal models ground language in visual evidence and generalize across domains." data-zh="视觉语言模型、多模态推理、表征学习与模型适配——研究大型多模态模型如何将语言与视觉证据相结合，并在不同领域间实现泛化。">Vision-language models, multimodal reasoning, representation learning, and model adaptation — how large multimodal models ground language in visual evidence and generalize across domains.</p>
         </div>
         <div class="card">
-          <h3><i class="fa-solid fa-flask-vial icon"></i> AI for Science &amp; Healthcare</h3>
-          <p>Applying AI to biomedical, clinical, and scientific discovery problems. My current concrete focus is medical AI — clinical imaging, medical visual question answering (Med-VQA, e.g., VQA-RAD, SLAKE, PathVQA, PMC-VQA), and multimodal biomedical data science.</p>
+          <h3><i class="fa-solid fa-flask-vial icon"></i> <span data-en="AI for Science &amp; Healthcare" data-zh="AI for Science 与医疗健康">AI for Science &amp; Healthcare</span></h3>
+          <p data-en="Applying AI to biomedical, clinical, and scientific discovery problems. My current concrete focus is medical AI — clinical imaging, medical visual question answering (Med-VQA, e.g., VQA-RAD, SLAKE, PathVQA, PMC-VQA), and multimodal biomedical data science." data-zh="将人工智能应用于生物医学、临床与科学发现问题。目前的具体研究重点是医疗人工智能——包括临床影像、医疗视觉问答（Med-VQA，如 VQA-RAD、SLAKE、PathVQA、PMC-VQA）以及多模态生物医学数据科学。">Applying AI to biomedical, clinical, and scientific discovery problems. My current concrete focus is medical AI — clinical imaging, medical visual question answering (Med-VQA, e.g., VQA-RAD, SLAKE, PathVQA, PMC-VQA), and multimodal biomedical data science.</p>
         </div>
         <div class="card">
-          <h3><i class="fa-solid fa-shield-halved icon"></i> Trustworthy &amp; Reliable AI</h3>
-          <p>Evaluation, robustness, model editing, uncertainty, and safe deployment. This is the throughline of my current work on M³Bench, a benchmark for reliable, localized model editing in medical vision-language models, and of the reproducible evaluation stacks (pre/post-edit scoring, automatic grading, evidence attribution, audit sampling) I build to support it.</p>
+          <h3><i class="fa-solid fa-shield-halved icon"></i> <span data-en="Trustworthy &amp; Reliable AI" data-zh="可信赖人工智能">Trustworthy &amp; Reliable AI</span></h3>
+          <p data-en="Evaluation, robustness, model editing, uncertainty, and safe deployment. This is the throughline of my current work on M³Bench, a benchmark for reliable, localized model editing in medical vision-language models, and of the reproducible evaluation stacks (pre/post-edit scoring, automatic grading, evidence attribution, audit sampling) I build to support it." data-zh="评测、鲁棒性、模型编辑、不确定性与安全部署。这是贯穿我目前 M³Bench 工作的核心主线——一个面向医疗视觉语言模型、关注可靠性与局部性的模型编辑评测基准，并配套了我所构建的可复现评测体系（编辑前后打分、自动评分、证据归因、抽样审查）。">Evaluation, robustness, model editing, uncertainty, and safe deployment. This is the throughline of my current work on M³Bench, a benchmark for reliable, localized model editing in medical vision-language models, and of the reproducible evaluation stacks (pre/post-edit scoring, automatic grading, evidence attribution, audit sampling) I build to support it.</p>
         </div>
         <div class="card">
-          <h3><i class="fa-solid fa-people-arrows icon"></i> Human-Centered AI &amp; AI Agents</h3>
-          <p>AI systems that interact with humans, tools, and environments. Beyond my current projects, I am developing emerging interests in vision-language-action (VLA) models and agentic systems as directions I hope to explore further.</p>
+          <h3><i class="fa-solid fa-people-arrows icon"></i> <span data-en="Human-Centered AI &amp; AI Agents" data-zh="以人为本的人工智能与 AI 智能体">Human-Centered AI &amp; AI Agents</span></h3>
+          <p data-en="AI systems that interact with humans, tools, and environments. Beyond my current projects, I am developing emerging interests in vision-language-action (VLA) models and agentic systems as directions I hope to explore further." data-zh="与人类、工具及环境交互的人工智能系统。除当前项目外，我也在发展对视觉-语言-动作（VLA）模型与智能体系统（Agentic Systems）的新兴兴趣，希望未来能进一步探索这些方向。">AI systems that interact with humans, tools, and environments. Beyond my current projects, I am developing emerging interests in vision-language-action (VLA) models and agentic systems as directions I hope to explore further.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2><i class="fa-solid fa-diagram-project icon"></i>Research Vision</h2>
-      <p>
+      <h2><i class="fa-solid fa-diagram-project icon"></i><span data-en="Research Vision" data-zh="研究愿景">Research Vision</span></h2>
+      <p class="i18n-en">
         A guiding theme across my projects is <strong>human-centered, multimodal AI</strong>: combining
         heterogeneous data sources (vision, language, structured records) with techniques for alignment,
         editing, and continual learning, evaluated not just on accuracy but on faithfulness, robustness under
@@ -69,15 +74,21 @@
         the underlying questions — how to adapt, evaluate, and trust large multimodal models — extend to AI
         for science more broadly.
       </p>
+      <p class="i18n-zh" lang="zh-CN">
+        贯穿我各项研究的一个核心主题是<strong>以人为本的多模态人工智能</strong>：将异构数据源（视觉、语言、结构化记录）与对齐、编辑、持续学习等技术相结合，评价标准也不仅限于准确率，而是同样关注忠实度、分布偏移下的鲁棒性与可复现性。医疗健康是我目前检验这些想法的具体场景，但其背后的核心问题——如何适配、评估并信任大型多模态模型——可以更广泛地延伸至科学智能（AI for Science）。
+      </p>
       <div class="project-figure">
         <img src="assets/img/research/research-vision-overview.png" alt="Research vision diagram: human-centered multimodal AI" />
       </div>
-      <p>
+      <p class="i18n-en">
         My past and current projects — medical multimodal model editing and evaluation (M³Bench), pathology
         RAG with provenance, and ultrasound × clinical data fusion — feed into a common direction: multimodal
         learning and foundation models that are robust, editable, and trustworthy enough for deployment in
         science and healthcare alike. Looking ahead, I hope to extend these ideas toward broader multimodal
         reasoning, agentic systems, and AI for scientific discovery.
+      </p>
+      <p class="i18n-zh" lang="zh-CN">
+        我过去与目前的项目——医疗多模态模型编辑与评测（M³Bench）、可溯源的病理学 RAG，以及超声 × 临床数据融合——共同指向一个方向：构建足够鲁棒、可编辑、可信赖，并能够在科学与医疗场景中部署的多模态学习与基础模型。展望未来，我希望将这些思路进一步拓展至更广泛的多模态推理、智能体系统，以及面向科学发现的人工智能。
       </p>
       <div class="project-figure">
         <img src="assets/img/research/research-experience-alignment.png" alt="Diagram aligning research experience with future research goals" />
@@ -89,7 +100,7 @@
 
 <footer>
   <div class="footer-inner">
-    <span>&copy; 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
+    <span data-en="© 2026 Guli Zhu. Built with a static, al-folio-inspired template." data-zh="© 2026 Guli Zhu。本网站采用静态、al-folio 风格模板构建。">© 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
     <div class="social-icons">
       <a href="mailto:gulizhu@umich.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>

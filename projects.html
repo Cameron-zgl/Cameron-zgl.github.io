@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<script>(function(){try{var l=localStorage.getItem('gz-lang')||'en';document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang', l==='zh'?'zh-CN':'en');}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Projects — Guli Zhu</title>
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -17,14 +18,18 @@
     <a class="brand" href="index.html">Guli Zhu</a>
     <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
     <div class="nav-links">
-      <a href="index.html" data-page="index.html">Home</a>
-      <a href="research.html" data-page="research.html">Research</a>
-      <a href="publications.html" data-page="publications.html">Publications</a>
-      <a href="projects.html" data-page="projects.html">Projects</a>
-      <a href="cv.html" data-page="cv.html">CV</a>
-      <a href="others.html" data-page="others.html">Personal</a>
+      <a href="index.html" data-page="index.html" data-en="Home" data-zh="首页">Home</a>
+      <a href="research.html" data-page="research.html" data-en="Research" data-zh="研究方向">Research</a>
+      <a href="publications.html" data-page="publications.html" data-en="Publications" data-zh="论文成果">Publications</a>
+      <a href="projects.html" data-page="projects.html" data-en="Projects" data-zh="项目">Projects</a>
+      <a href="cv.html" data-page="cv.html" data-en="CV" data-zh="简历">CV</a>
+      <a href="others.html" data-page="others.html" data-en="Personal" data-zh="个人">Personal</a>
     </div>
     <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language switch">
+        <button type="button" data-lang-opt="en">EN</button>
+        <button type="button" data-lang-opt="zh">中文</button>
+      </div>
       <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
     </div>
   </div>
@@ -34,12 +39,16 @@
   <div class="container">
 
     <div class="page-header">
-      <h1>Projects</h1>
-      <p>
+      <h1 data-en="Projects" data-zh="项目">Projects</h1>
+      <p class="i18n-en">
         Research and engineering projects spanning multimodal AI, applied healthcare AI, and biomedical data
         science, drawn from my CV — these are not themselves published papers. For a representative project on
         trustworthy model editing and evaluation in medical multimodal VLMs (M³Bench, ECCV 2026), see the
         <a href="publications.html#m3bench">Publications page</a>.
+      </p>
+      <p class="i18n-zh" lang="zh-CN">
+        本页展示了我在多模态人工智能、应用型医疗 AI 与生物医学数据科学等方向的研究与工程项目（均整理自我的简历），这些项目本身并非已发表论文。关于医疗多模态 VLM 可信模型编辑与评测的代表性项目（M³Bench，ECCV 2026），请见
+        <a href="publications.html#m3bench">"论文成果"页面</a>。
       </p>
     </div>
 
@@ -48,10 +57,13 @@
 
         <div class="card">
           <h3>Ultrasound–Diabetes Multimodal Prediction</h3>
-          <p>
+          <p class="i18n-en">
             University of Michigan, Graduate Researcher (PI: Prof. Liyue Shen), 2025.03.
           </p>
-          <p>
+          <p class="i18n-zh" lang="zh-CN">
+            密歇根大学，研究生研究员（导师：Liyue Shen 教授），2025.03。
+          </p>
+          <p class="i18n-en">
             Built a unified pipeline linking clinical variables (e.g., BMI, age, labs) with skeletal-muscle
             ultrasound (deltoid, vastus; SAX/LAX views) for diabetes and insulin-resistance prediction.
             Trained clinical-only baselines and developed segmentation models (U-Net/MedSAM) to derive
@@ -59,71 +71,98 @@
             radiomics/texture descriptors and patient-level cross-validated evaluation. Designed and compared
             early- and late-fusion multimodal strategies to predict insulin resistance / type 2 diabetes.
           </p>
-          <span class="status-badge status-completed">Completed</span>
+          <p class="i18n-zh" lang="zh-CN">
+            构建了将临床变量（如 BMI、年龄、化验指标）与骨骼肌超声（三角肌、股四头肌；短轴/长轴切面）相结合的统一流程，用于糖尿病与胰岛素抵抗预测。训练了仅基于临床数据的基线模型，并开发了基于 U-Net/MedSAM 的分割方法以提取定量肌肉特征（回声强度/密度、厚度、横截面积），结合影像组学/纹理特征与患者级别的交叉验证评测。设计并比较了早融合与晚融合等多模态融合策略，用于预测胰岛素抵抗/二型糖尿病。
+          </p>
+          <span class="status-badge status-completed" data-en="Completed" data-zh="已完成">Completed</span>
           <div class="tags"><span class="tag">Ultrasound</span><span class="tag">Segmentation</span><span class="tag">Radiomics</span><span class="tag">Multimodal Fusion</span></div>
         </div>
 
         <div class="card">
           <h3>Biomedical Pathology RAG Benchmark (DIAG)</h3>
-          <p>
+          <p class="i18n-en">
             University of Michigan, Multidisciplinary Design Program (MDP), Team Lead, 2025.01.
           </p>
-          <p>
+          <p class="i18n-zh" lang="zh-CN">
+            密歇根大学，跨学科设计项目（MDP），团队负责人，2025.01。
+          </p>
+          <p class="i18n-en">
             Lead a subteam designing a pathology-specific retrieval-augmented generation (RAG) benchmark for
             biomedical and pathology LLMs, integrating BioLLM and DeepSeek models with modular retrievers and
             embeddings. Developed standardized datasets and retrieval/generation evaluation metrics
             (e.g., Recall@K, nDCG, faithfulness) together with evidence-citation pipelines for benchmarking.
           </p>
-          <span class="status-badge status-completed">Completed</span>
+          <p class="i18n-zh" lang="zh-CN">
+            在跨学科设计项目（MDP）框架下领导子团队，设计面向生物医学与病理学大语言模型的检索增强生成（RAG）评测基准，集成 BioLLM 与 DeepSeek 模型及模块化检索器与向量表示。构建了标准化数据集，以及检索与生成评测指标（如 Recall@K、nDCG、忠实度）与证据引用流程。
+          </p>
+          <span class="status-badge status-completed" data-en="Completed" data-zh="已完成">Completed</span>
           <div class="tags"><span class="tag">RAG</span><span class="tag">Pathology</span><span class="tag">LLM Evaluation</span></div>
         </div>
 
         <div class="card">
           <h3>Final Year Project: Kimera with SLAM Semantic Mapping and Localization</h3>
-          <p>
+          <p class="i18n-en">
             BNBU, Student Researcher, 2023.05 – 2023.12.
           </p>
-          <p>
+          <p class="i18n-zh" lang="zh-CN">
+            北京师范大学-香港浸会大学联合国际学院（BNBU），本科生研究员，2023.05 – 2023.12。
+          </p>
+          <p class="i18n-en">
             Replicated MIT's Kimera project and explored semantic segmentation in SLAM, investigating its
             impact on localization accuracy and introducing optimizations to improve outcomes.
           </p>
-          <span class="status-badge status-completed">Completed</span>
+          <p class="i18n-zh" lang="zh-CN">
+            复现了 MIT 的 Kimera 项目，探索语义分割在 SLAM 中的应用，研究其对定位精度的影响，并引入多项优化以提升项目效果。
+          </p>
+          <span class="status-badge status-completed" data-en="Completed" data-zh="已完成">Completed</span>
           <div class="tags"><span class="tag">SLAM</span><span class="tag">Semantic Segmentation</span></div>
         </div>
 
         <div class="card">
           <h3>Large Language Model Evaluation Project</h3>
-          <p>
+          <p class="i18n-en">
             BNBU, Researcher, 2023.05 – 2023.12, Zhuhai, China.
           </p>
-          <p>
+          <p class="i18n-zh" lang="zh-CN">
+            北京师范大学-香港浸会大学联合国际学院（BNBU），研究员，2023.05 – 2023.12，中国珠海。
+          </p>
+          <p class="i18n-en">
             Conducted a review of LLM assessment methods and analyzed their pros and cons. Evaluated the
             critical thinking of LLMs by drawing on psychology and sociology insights, and developed methods
             to assess the critical-thinking abilities of large language models.
           </p>
-          <span class="status-badge status-completed">Completed</span>
+          <p class="i18n-zh" lang="zh-CN">
+            系统梳理了大语言模型评测方法的研究现状并分析其优缺点，结合心理学与社会学视角评估大语言模型的批判性思维能力，并提出了相应的评估方法。
+          </p>
+          <span class="status-badge status-completed" data-en="Completed" data-zh="已完成">Completed</span>
           <div class="tags"><span class="tag">LLM Evaluation</span><span class="tag">Critical Thinking</span><span class="tag">Sociology &amp; Psychology</span></div>
         </div>
 
         <div class="card">
           <h3>Genetic Disease Research Project in Data Science</h3>
-          <p>
+          <p class="i18n-en">
             BNBU, Project Subteam Leader, 2022.10 – 2023.04.
           </p>
-          <p>
+          <p class="i18n-zh" lang="zh-CN">
+            北京师范大学-香港浸会大学联合国际学院（BNBU），项目小组负责人，2022.10 – 2023.04。
+          </p>
+          <p class="i18n-en">
             Led data analysis and modeling using Decision Trees, Gradient Boosting Trees, Random Forests, and
             Logistic Regression; the final Logistic Regression model achieved 93% accuracy. Results were
             published at IEEE MedAI 2023 and implemented in local hospitals.
           </p>
-          <span class="status-badge status-completed">Completed</span>
+          <p class="i18n-zh" lang="zh-CN">
+            主导数据分析与建模，训练决策树、梯度提升树、随机森林与逻辑回归模型；在发现召回率欠佳后应用过拟合缓解技术提升性能，最终逻辑回归模型达到 93% 的准确率。相关成果发表于 IEEE MedAI 2023，并已在当地医院落地应用。
+          </p>
+          <span class="status-badge status-completed" data-en="Completed" data-zh="已完成">Completed</span>
           <div class="tags"><span class="tag">Classical ML</span><span class="tag">Healthcare</span></div>
-          <p class="section-foot"><a href="publications.html">See related publication →</a></p>
+          <p class="section-foot"><a href="publications.html" data-en="See related publication →" data-zh="查看相关论文 →">See related publication →</a></p>
         </div>
 
         <div class="card" style="border-style:dashed; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:var(--text-muted);">
           <i class="fa-solid fa-plus" style="font-size:1.4rem; margin-bottom:8px;"></i>
-          <h3 style="color:var(--text-muted);">More Projects Coming Soon</h3>
-          <p>PLACEHOLDER — additional engineering/course projects can be added here.</p>
+          <h3 style="color:var(--text-muted);" data-en="More Projects Coming Soon" data-zh="更多项目即将上线">More Projects Coming Soon</h3>
+          <p data-en="PLACEHOLDER — additional engineering/course projects can be added here." data-zh="PLACEHOLDER — 后续可在此处补充更多工程/课程项目。">PLACEHOLDER — additional engineering/course projects can be added here.</p>
         </div>
 
       </div>
@@ -134,7 +173,7 @@
 
 <footer>
   <div class="footer-inner">
-    <span>&copy; 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
+    <span data-en="© 2026 Guli Zhu. Built with a static, al-folio-inspired template." data-zh="© 2026 Guli Zhu。本网站采用静态、al-folio 风格模板构建。">© 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
     <div class="social-icons">
       <a href="mailto:gulizhu@umich.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>

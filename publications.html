@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<script>(function(){try{var l=localStorage.getItem('gz-lang')||'en';document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang', l==='zh'?'zh-CN':'en');}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Publications — Guli Zhu</title>
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -17,14 +18,18 @@
     <a class="brand" href="index.html">Guli Zhu</a>
     <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
     <div class="nav-links">
-      <a href="index.html" data-page="index.html">Home</a>
-      <a href="research.html" data-page="research.html">Research</a>
-      <a href="publications.html" data-page="publications.html">Publications</a>
-      <a href="projects.html" data-page="projects.html">Projects</a>
-      <a href="cv.html" data-page="cv.html">CV</a>
-      <a href="others.html" data-page="others.html">Personal</a>
+      <a href="index.html" data-page="index.html" data-en="Home" data-zh="首页">Home</a>
+      <a href="research.html" data-page="research.html" data-en="Research" data-zh="研究方向">Research</a>
+      <a href="publications.html" data-page="publications.html" data-en="Publications" data-zh="论文成果">Publications</a>
+      <a href="projects.html" data-page="projects.html" data-en="Projects" data-zh="项目">Projects</a>
+      <a href="cv.html" data-page="cv.html" data-en="CV" data-zh="简历">CV</a>
+      <a href="others.html" data-page="others.html" data-en="Personal" data-zh="个人">Personal</a>
     </div>
     <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language switch">
+        <button type="button" data-lang-opt="en">EN</button>
+        <button type="button" data-lang-opt="zh">中文</button>
+      </div>
       <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
     </div>
   </div>
@@ -40,16 +45,17 @@
       <article class="card" id="m3bench" style="padding:26px;">
         <div class="project-figure" style="margin-top:0;">
           <img src="assets/img/m3bench/workflow.png" alt="Post-deployment medical VLM model editing workflow with clinician-in-the-loop feedback" />
-          <p class="caption">Post-deployment workflow of medical VLM model editing with clinician-in-the-loop feedback: targeted edits correct specific errors while preserving existing model behavior.</p>
+          <p class="caption i18n-en">Post-deployment workflow of medical VLM model editing with clinician-in-the-loop feedback: targeted edits correct specific errors while preserving existing model behavior.</p>
+          <p class="caption i18n-zh" lang="zh-CN">医疗 VLM 模型编辑的部署后流程示意：临床医生反馈参与其中，目标性编辑在保持模型原有行为的同时纠正特定错误。</p>
         </div>
 
         <p class="pub-title" style="font-size:1.25rem;">Evaluating and Understanding Model Editing for Medical Vision Language Models (M³Bench)</p>
         <p class="pub-authors"><span class="me">Guli Zhu</span>*, Chenwei Wu*, Liyue Shen &nbsp;<span class="muted">(* equal contribution) — University of Michigan, Ann Arbor</span></p>
         <p class="pub-venue">European Conference on Computer Vision (ECCV) 2026 <span class="status-badge status-accepted">Accepted</span></p>
-        <p class="muted" style="font-style:italic; margin-top:8px;">A representative project on trustworthy model editing and evaluation for medical multimodal vision-language models — one strand of my broader interests in multimodal foundation models and trustworthy AI.</p>
+        <p class="muted" style="font-style:italic; margin-top:8px;" data-en="A representative project on trustworthy model editing and evaluation for medical multimodal vision-language models — one strand of my broader interests in multimodal foundation models and trustworthy AI." data-zh="这是我在医疗多模态视觉语言模型可信模型编辑与评测方向上的代表性项目，也是我在多模态基础模型与可信赖人工智能这一更广泛研究兴趣中的一条具体研究线索。">A representative project on trustworthy model editing and evaluation for medical multimodal vision-language models — one strand of my broader interests in multimodal foundation models and trustworthy AI.</p>
 
-        <h3 style="margin-top:20px;">Abstract</h3>
-        <p>
+        <h3 style="margin-top:20px;" data-en="Abstract" data-zh="摘要">Abstract</h3>
+        <p class="i18n-en">
           Model editing promises a fast, targeted way to correct post-deployment mistakes in medical
           vision-language models (VLMs) without costly retraining. However, existing multimodal model editing
           benchmarks focus on general-purpose tasks and do not reflect realistic clinical domain requirements
@@ -66,26 +72,36 @@
           establishes a rigorous clinical stress test for multimodal model editing and offers actionable
           guidance for safer post-deployment adaptation.
         </p>
+        <p class="i18n-zh" lang="zh-CN">
+          模型编辑（Model Editing）有望成为一种快速、有针对性的方法，用于在无需高成本重新训练的情况下纠正医疗视觉语言模型（VLMs）在部署后出现的错误。然而，现有的多模态模型编辑基准大多面向通用任务，未能充分反映真实临床场景下的领域需求与多样性。为此，我们提出了 M³Bench——一个具有临床意义的多模态模型编辑评测基准，用于评估编辑是否在图像与文本变化、模态与采集协议迁移、临床知识组合，以及时间维度演变等挑战下，依然保持可靠、精确且可泛化。M³Bench 涵盖 16,276 个问题，覆盖多种解剖结构、影像模态与临床专科，并同时支持单次编辑与序列编辑设置。我们在 4 个代表性编辑方法与 4 个医疗 VLM 上进行了系统评测，发现没有任何一种方法能够在所有评测维度上全面占优：基于梯度的编辑方法具有较强的泛化能力，但容易出现严重的局部性破坏；而基于记忆的编辑方法能够更好地保持局部性，却缺乏组合泛化能力，并且对不同骨干模型的超参数高度敏感。我们进一步将这些失效模式归因于 VLM 的潜在空间几何结构，并分析了不同编辑方法如何改变这一结构。总体而言，M³Bench 为多模态模型编辑建立了一套严格的临床压力测试，并为更安全的部署后模型适配提供了可操作的指导。
+        </p>
 
-        <h3>Key Contributions</h3>
-        <ul class="simple-list">
+        <h3 data-en="Key Contributions" data-zh="主要贡献">Key Contributions</h3>
+        <ul class="simple-list i18n-en">
           <li>Introduce M³Bench, a clinically grounded benchmark for multimodal model editing in medical VLMs, with 16,276 questions over 1,398 unique images spanning multiple modalities, anatomical sites, and findings.</li>
           <li>Define a six-dimension evaluation framework centered on reliability, locality vs. generality (image and text axes), modality shift, compositional edits, and temporal stability — supporting both single-edit and sequential-edit regimes.</li>
           <li>Benchmark 4 representative editing methods (MEND, GRACE, BalancEdit, LoRA) across 4 medical VLM backbones (LLaVA-Med, BioMed-Qwen, HuatuoGPT-Vision 7B/34B).</li>
           <li>Show that gradient-based editors achieve strong reliability/generality but suffer catastrophic locality violations, while memory-based editors preserve locality but lack compositional generality and are highly sensitive to backbone-dependent hyperparameters.</li>
           <li>Attribute these failure modes to the latent-space geometry of medical VLMs (a concentrated "cone effect" among clinical concepts) and analyze how different editing methods reshape that geometry.</li>
         </ul>
+        <ul class="simple-list i18n-zh" lang="zh-CN">
+          <li>提出 M³Bench——一个面向医疗 VLM 多模态模型编辑的、具有临床意义的评测基准，包含 16,276 个问题、1,398 张涵盖多种影像模态、解剖部位与病灶类型的独立图像。</li>
+          <li>定义了围绕可靠性（Reliability）、局部性与泛化性（图像与文本维度）、模态迁移、组合式编辑及时间稳定性的六维评测框架，同时支持单次编辑与序列编辑两种设置。</li>
+          <li>在 4 个医疗 VLM 骨干模型（LLaVA-Med、BioMed-Qwen、HuatuoGPT-Vision 7B/34B）上，对 4 种代表性编辑方法（MEND、GRACE、BalancEdit、LoRA）进行了系统评测。</li>
+          <li>研究表明，基于梯度的编辑方法具有较强的可靠性与泛化能力，但会出现严重的局部性破坏；而基于记忆的编辑方法能较好地保持局部性，却缺乏组合泛化能力，且对骨干模型相关的超参数高度敏感。</li>
+          <li>将上述失效模式归因于医疗 VLM 潜在空间的几何结构（即临床概念高度集中的"锥形效应"），并分析了不同编辑方法对该几何结构的重塑方式。</li>
+        </ul>
 
         <div class="pub-links" style="margin-top:18px;">
-          <a class="btn btn-placeholder" href="#"><i class="fa-solid fa-file-lines"></i> Paper <span class="placeholder-note">placeholder</span></a>
-          <a class="btn" href="https://github.com/BioMed-AI-Lab-U-Michgan/M3Bench" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
-          <a class="btn" href="https://biomed-ai-lab-u-michgan.github.io/M3Bench/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Project Website</a>
-          <a class="btn btn-placeholder" href="#"><i class="fa-solid fa-database"></i> Hugging Face <span class="placeholder-note">placeholder</span></a>
+          <a class="btn btn-placeholder" href="#"><i class="fa-solid fa-file-lines"></i> <span data-en="Paper" data-zh="论文">Paper</span> <span class="placeholder-note" data-en="placeholder" data-zh="待补充">placeholder</span></a>
+          <a class="btn" href="https://github.com/BioMed-AI-Lab-U-Michgan/M3Bench" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> <span data-en="Code" data-zh="代码">Code</span></a>
+          <a class="btn" href="https://biomed-ai-lab-u-michgan.github.io/M3Bench/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> <span data-en="Project Website" data-zh="项目主页">Project Website</span></a>
+          <a class="btn btn-placeholder" href="#"><i class="fa-solid fa-database"></i> Hugging Face <span class="placeholder-note" data-en="placeholder" data-zh="待补充">placeholder</span></a>
           <a class="btn" href="#bib-m3bench"><i class="fa-solid fa-quote-left"></i> BibTeX</a>
         </div>
 
         <div class="bibtex-block" id="bib-m3bench">
-          <button class="btn copy-btn" data-copy-target="#bib-m3bench-code"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn copy-btn" data-copy-target="#bib-m3bench-code"><i class="fa-regular fa-copy"></i> <span data-en="Copy" data-zh="复制">Copy</span></button>
           <pre id="bib-m3bench-code">@inproceedings{m3bench2026,
   title     = {Evaluating and Understanding Model Editing for Medical Vision-Language Models},
   author    = {Zhu, Guli and Wu, Chenwei and Shen, Liyue},
@@ -148,7 +164,7 @@
 
 <footer>
   <div class="footer-inner">
-    <span>&copy; 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
+    <span data-en="© 2026 Guli Zhu. Built with a static, al-folio-inspired template." data-zh="© 2026 Guli Zhu。本网站采用静态、al-folio 风格模板构建。">© 2026 Guli Zhu. Built with a static, al-folio-inspired template.</span>
     <div class="social-icons">
       <a href="mailto:gulizhu@umich.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://github.com/Cameron-zgl" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
